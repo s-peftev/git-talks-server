@@ -10,7 +10,7 @@ class RelativeUserController extends Controller
 {
     public function index(Request $request)
     {
-        $countPerPage = (int) $request->count;
+        $countPerPage = min((int)$request->count, 50);
         $totalCount = RelativeUser::all()->count();
         $allUsers = RelativeUser::simplePaginate($countPerPage);
 
