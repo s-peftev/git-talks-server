@@ -12,7 +12,7 @@ class UserController extends Controller
         $countPerPage = min((int)$request->count, 50);
         $totalCount = User::all()->count();
         $allUsers = User::simplePaginate($countPerPage);
-        
+
         foreach($allUsers as $user) {
             $user->followed = false;
         }
