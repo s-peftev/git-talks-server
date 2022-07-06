@@ -15,4 +15,4 @@ use App\Http\Controllers\RelativeUserController;
 |
 */
 
-Route::apiResource('/users', 'RelativeUserController');
+Route::apiResource('/users', 'UserController');
