@@ -6,7 +6,7 @@ $u->about = 'she/her';
 $u->email = 'emma-watson@gmail.com';
 $u->city = 'London';
 $u->website = 'emma-watson.com';
-$u->birthday = '15-04-1990';
+$u->birthday = '1990-04-15';
 $u->password = password_hash('0000',  PASSWORD_DEFAULT);
 $u->save();
 
@@ -18,7 +18,7 @@ $u->about = 'Real Madrid';
 $u->email = 'mrancelotti@gmail.com';
 $u->city = 'Milano';
 $u->website = 'mrancelotti.com';
-$u->birthday = '10-06-1959';
+$u->birthday = '1959-10-06';
 $u->password = password_hash('0000',  PASSWORD_DEFAULT);
 $u->save();
 
@@ -30,7 +30,7 @@ $u->about = 'My new album “Love Sux” is out now and I`m on tour';
 $u->email = 'avrillavigne@gmail.com';
 $u->city = 'New York';
 $u->website = 'avrillavigne.com';
-$u->birthday = '27-09-1984';
+$u->birthday = '1984-09-27';
 $u->password = password_hash('0000',  PASSWORD_DEFAULT);
 $u->save();
 
@@ -42,6 +42,18 @@ $u->about = 'Where ignorance is our master, there is no possibility of real peac
 $u->email = 'dalailama14@gmail.com';
 $u->city = 'New Deli';
 $u->website = 'dalailama14.com';
-$u->birthday = '06-06-1935';
+$u->birthday = '1935-06-06';
+$u->password = password_hash('0000',  PASSWORD_DEFAULT);
+$u->save();
+
+$u = new App\Models\User()
+$u->name = 'Stas Peftiev'
+$u->login = '@stani';
+$u->photo = 'https://upload.wikimedia.org/wikipedia/commons/5/55/Dalailama1_20121014_4639.jpg';
+$u->about = 'git-talks creator';
+$u->email = 'dalailama14@gmail.com';
+$u->city = 'New Deli';
+$u->website = 'dalailama14.com';
+$u->birthday = '1935-06-06';
 $u->password = password_hash('0000',  PASSWORD_DEFAULT);
 $u->save();

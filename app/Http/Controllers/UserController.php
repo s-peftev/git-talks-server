@@ -22,4 +22,10 @@ class UserController extends Controller
             'totalCount' => $totalCount,
         ];
     }
+
+    public function show($userId)
+    {
+        $user = User::findOrFail($userId);
+        return $user;
+    }
 }
