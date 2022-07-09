@@ -14,15 +14,15 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
-        if(!Auth::attempt($credentials, true)) {
-            throw ValidationException::withMessages([
-                'email' => [
-                    __('auth.failed')
-                ]
-            ]);
+        if (Auth::attempt($credentials, true)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('dashboard');
         }
 
-        return $request->user();
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
     }
 
     public function logout() {
