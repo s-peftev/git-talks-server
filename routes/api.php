@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RelativeUserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +15,8 @@ use App\Http\Controllers\RelativeUserController;
 |
 */
 
-Route::apiResource('/users', 'UserController');
+Route::post('login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout']);
+
+Route::apiResource('/users', 'UserController')
+    ->middleware('auth:sanctum');

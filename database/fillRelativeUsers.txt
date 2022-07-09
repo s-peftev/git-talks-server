@@ -49,11 +49,11 @@ $u->save();
 $u = new App\Models\User()
 $u->name = 'Stas Peftiev'
 $u->login = '@stani';
-$u->photo = 'https://upload.wikimedia.org/wikipedia/commons/5/55/Dalailama1_20121014_4639.jpg';
+$u->photo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQLaa4gZqJ1daO8Ypq8CxEVgboVIZONfIxYw&usqp=CAU';
 $u->about = 'git-talks creator';
-$u->email = 'dalailama14@gmail.com';
-$u->city = 'New Deli';
-$u->website = 'dalailama14.com';
-$u->birthday = '1935-06-06';
+$u->email = 'stani@gmail.com';
+$u->city = 'Kyiv';
+$u->website = 'stani.com';
+$u->birthday = '1992-09-30';
 $u->password = password_hash('0000',  PASSWORD_DEFAULT);
 $u->save();
